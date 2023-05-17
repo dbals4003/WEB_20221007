@@ -1,7 +1,7 @@
 function pop_up(){
 	var cookieCheck = getCookie("popupYN");
 	if(cookieCheck != "N"){
-		window.open("../pop_up.html", "팝업테스트", "width=400, height=300, top=10, left=10"); //가로 400, 세로 300, 위 10, 왼쪽 10 여백
+		window.open("pop_up.html", "팝업테스트", "width=400, height=300, top=10, left=10"); //가로 400, 세로 300, 위 10, 왼쪽 10 여백
 	}
 } // 윈도우.open() 함수는 창을 열거나 닫는 (.close) 전용 함수이다.
 
@@ -50,7 +50,7 @@ function getCookie(name){
 	return;
 }
 
-function colsePopup(){
+function closePopup(){
 	if (document.getElementById('check_popup').value){
 		setCookie("popupYN", "N", 1);
 		console.log("쿠키를 설정합니다.");
