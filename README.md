@@ -2,8 +2,42 @@
 웹프로그래밍 (1) 소스코드
 ## 2023년 5월 31일 13주차 홈페이지 수정 완료
 
+## 기능 추가
+### 소개 페이지 내 검색 기능 추가
+#### *소개 페이지 내에서 찾고 싶은 것을 검색할 시 그 부분만 한 눈에 보이게끔 구현
+```
+// 검색창과 버튼
+<div class = "container my-4">
+	<div class = "input-group">
+		<input type = "text" id="searchInput" class = "form-control" placeholder="검색">
+		<button type = "button" class = "btn btn-primary" onclick = "search()">검색</button>
+	</div>
+</div>
+
+// 검색 기능
+<script>
+		function search(){
+		var input = document.getElementById("searchInput").value.toLowerCase();
+		var rows = document.getElementsByClassName("row");
+		
+		for (var i = 0; i < rows.length; i++){
+		var row = rows[i];
+		var text = row.innerText.toLowerCase();
+		
+		if (text.includes(input)){
+		row.style.display = "";
+		} else{
+		row.style.display = "none";
+		}
+	}
+}
+</script>
+```
+
+---
+
 ## 문제 풀기
-[문제1](https://github.com/dbals4003/WEB_20221007/blob/main/screen_shot/3Quiz.PNG, "3주차 문제")
+### [문제1]
 ```
 <table style="margin-left: auto; margin-right: auto;" border="1" width="500">
 			<! 테이블을 정의합니다.>
@@ -18,7 +52,7 @@
 		</table>
 ```
 
-[문제2](https://github.com/dbals4003/WEB_20221007/blob/main/screen_shot/6Quiz.PNG, "6주차 문제")
+### [문제2]
 ```
 document.getElementById("search_btn").addEventListener('click', search_message);
 
@@ -58,7 +92,7 @@ function search_message() {
 }
 ```
 
-[문제3](https://github.com/dbals4003/WEB_20221007/blob/main/screen_shot/7Quiz.PNG, "7주차 문제")
+### [문제3]
 ```
 var close_time; //시간 정보
 var close_time2 = 10; // 10초 설정
@@ -81,7 +115,7 @@ function close_window(){ // 함수 정의
 //window.onload = showWindow;
 ```
 
-[문제4](https://github.com/dbals4003/WEB_20221007/blob/main/screen_shot/9Quiz.PNG, "9주차 문제")
+### [문제4]
 ```
 // 아이디 패스워드 정규식필터링
 function login_check(email, password){
