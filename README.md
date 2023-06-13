@@ -4,7 +4,7 @@
 
 ## 기능 추가
 ### 소개 페이지 내 검색 기능 추가
-#### *소개 페이지 내에서 찾고 싶은 것을 검색할 시 그 부분만 한 눈에 보이게끔 구현
+#### *소개 페이지 내에서 찾고 싶은 것을 검색할 시 그 부분만 한 눈에 보이게끔 구현 (스크린샷 폴더 확인)
 ```
 // 검색창과 버튼
 <div class = "container my-4">
@@ -37,7 +37,7 @@
 ---
 
 ## 문제 풀기
-### [문제1]
+### [3주차]
 ```
 <table style="margin-left: auto; margin-right: auto;" border="1" width="500">
 			<! 테이블을 정의합니다.>
@@ -52,7 +52,7 @@
 		</table>
 ```
 
-### [문제2]
+### [6주차]
 ```
 document.getElementById("search_btn").addEventListener('click', search_message);
 
@@ -92,7 +92,7 @@ function search_message() {
 }
 ```
 
-### [문제3]
+### [7주차]
 ```
 var close_time; //시간 정보
 var close_time2 = 10; // 10초 설정
@@ -115,7 +115,7 @@ function close_window(){ // 함수 정의
 //window.onload = showWindow;
 ```
 
-### [문제4]
+### [9주차]
 ```
 // 아이디 패스워드 정규식필터링
 function login_check(email, password){
