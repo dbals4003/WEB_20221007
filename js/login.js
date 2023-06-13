@@ -18,9 +18,14 @@ function login(){ // 로그인
 	
 	if(id.value.length === 0 || password.value.length === 0){
 		alert("아이디와 비밀번호를 모두 입력해주세요.");
-	}else{
+	}else if(!login_check(id.value, password.value)) {
+		alert("올바른 이메일과 패스워드 형식을 입력해주세요.");
+	}else {
+		form.action = "../index_login.html";
+		form.method = "get";
 		session_set(); // 세션 생성
 		form.submit();
+		login_count();
 	}
 }
 
@@ -74,3 +79,16 @@ function addJavascript(jsname) { // 자바스크립트 외부 연동
 addJavascript('/js/security.js'); // 암복호화 함수
 addJavascript('/js/session.js'); // 세션 함수
 addJavascript('/js/cookie.js'); // 쿠키 함수
+
+// 아이디 패스워드 정규식필터링
+function login_check(email, password){
+	const emailRegex = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+	const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@!%*#?&])[A-Za-z\d@!%*#?&]{8,}$/;
+	if (!emailRegex.test(email)){
+		return false;
+	}
+	if (!passwordRegex.test(password)){
+		return false;
+	}
+	return true;
+}
