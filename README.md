@@ -3,7 +3,7 @@
 ## 2023년 5월 31일 13주차 홈페이지 수정 완료
 
 ## 문제 풀기
-[문제1](https://github.com/dbals4003/WEB_20221007/blob/main/screen_shot/Cookie.PNG, "3주차 문제")
+[문제1](https://github.com/dbals4003/WEB_20221007/blob/main/screen_shot/3%20Quiz.PNG, "3주차 문제")
 ```
 <table style="margin-left: auto; margin-right: auto;" border="1" width="500">
 			<! 테이블을 정의합니다.>
@@ -18,7 +18,7 @@
 		</table>
 ```
 
-[문제2]
+[문제2](https://github.com/dbals4003/WEB_20221007/blob/main/screen_shot/6%20Quiz.PNG, "6주차 문제")
 ```
 document.getElementById("search_btn").addEventListener('click', search_message);
 
@@ -58,7 +58,7 @@ function search_message() {
 }
 ```
 
-[문제3]
+[문제3](https://github.com/dbals4003/WEB_20221007/blob/main/screen_shot/7%20Quiz.PNG, "7주차 문제")
 ```
 var close_time; //시간 정보
 var close_time2 = 10; // 10초 설정
@@ -81,7 +81,7 @@ function close_window(){ // 함수 정의
 //window.onload = showWindow;
 ```
 
-[문제4]
+[문제4](https://github.com/dbals4003/WEB_20221007/blob/main/screen_shot/9%20Quiz.PNG, "9주차 문제")
 ```
 // 아이디 패스워드 정규식필터링
 function login_check(email, password){
